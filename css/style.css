@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* ===== HEADER ===== */
+header {
+  width: 100%;
+  padding: 20px 50px;
+  background-color: #1a1a1a;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.logo {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.navegacao {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.navegacao a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navegacao a:hover {
+  color: #3ce6f2;
+}
+
+/* Ícone do menu */
+#menu {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ===== SEÇÃO HOME ===== */
+.home {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+
+.home-img img {
+  width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.home-text {
+  max-width: 500px;
+}
+
+.home-text h1 {
+  font-size: 28px;
+  color: #222;
+  text-align: center;
+}
+
+.home-text h2 {
+  font-size: 30px;
+  color: #222;
+  text-align: center;
+  margin-top: -30px;
+}
+
+.home-text h5 {
+  font-weight: 500;
+  margin: 10px 0;
+  line-height: 1.5;
+  color: #555;
+  text-align: justify;
+}
+
+/* ===== MINI SLIDER ===== */
+.main {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.main ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.main img {
+  width: 120px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.main img:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  #menu {
+    display: block;
+  }
+
+  .navegacao {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #1a1a1a;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+    padding: 20px;
+  }
+
+  .navegacao.open {
+    display: flex;
+  }
+}
+
+/* ===== IMAGEM PRINCIPAL DO SLIDER ===== */
+
+.home-img img {
+  width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade {
+  opacity: 0;
+}
+
+footer{
+  text-align: center;
+  color: rgba(10, 10, 10, 0.995);
+}

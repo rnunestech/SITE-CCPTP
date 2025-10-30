@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== HEADER ===== */
+header {
+  width: 100%;
+  padding: 20px 50px;
+  background-color: #000; /* Preto no topo */
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.logo {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.navegacao {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.navegacao a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navegacao a:hover {
+  color: #48dae4; /* Azul claro no hover */
+}
+
+/* ===== BODY ===== */
+body {
+  background: #f6f9fc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== SEÇÃO SOBRE ===== */
+section.sobre {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 120px; /* espaço para o header fixo */
+  padding: 60px 40px;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(135deg, #f6f9fc 0%, #e3f2fd 100%);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.sobre-conteudo {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* ===== IMAGEM ===== */
+.sobre-imagem img {
+  width: 350px;
+  height: auto;
+  border-radius: 20px;
+  border: 4px solid #d4af37; /* Moldura dourada */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.6s ease, box-shadow 0.6s ease, filter 0.6s ease;
+}
+
+.sobre-imagem img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  filter: brightness(1.05);
+}
+
+/* ===== TEXTO ===== */
+.sobre-texto {
+  flex: 1;
+  opacity: 0;
+  animation: fadeText 1.2s ease forwards;
+  animation-delay: 0.3s;
+  text-align: justify;
+}
+
+.sobre-texto h1 {
+  font-size: 32px;
+  color: #0d47a1;
+  margin-bottom: 10px;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+/* Linha decorativa abaixo do título */
+.sobre-texto h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #48dae4;
+  border-radius: 2px;
+  margin-top: 8px;
+}
+
+.sobre-texto p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* ===== ANIMAÇÕES ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeText {
+  to {
+    opacity: 1;
+  }
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  section.sobre {
+    padding: 40px 20px;
+  }
+
+  .sobre-conteudo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sobre-imagem img {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .sobre-texto h1 {
+    font-size: 26px;
+  }
+
+  .sobre-texto h1::after {
+    margin: 8px auto;
+  }
+}
+
+footer{
+  text-align: center;
+  color: rgba(10, 10, 10, 0.995);
+}
+

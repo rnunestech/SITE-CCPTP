@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCPTP</title>
+      <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="./css/pedOracao.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo"><i class='bx bx-church'></i>Comunidade Cristã para Todos os Povos</a>
+    <ul class="navegacao">
+      <li><a href="sbIgreja.html">Sobre a Igreja</a></li>
+      <li><a href="galeriaft.html">Galeria de Fotos</a></li>
+      <li><a href="game.html">Quiz Bíblico</a></li>
+      <li><a href="pedOracao.html">Pedido de Oração</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </header>
+
+  <section class="form-section">
+    <div class="form-container">
+      <div class="image-container">
+        <img src="./img/PedidoDeOracao.jpg" alt="Pedido de Oração">
+      </div>
+
+      <div class="form-content">
+        <h2>Envie seu Pedido de Oração</h2>
+        <p class="descricao">
+         <i>Compartilhe seu pedido de oração conosco.<br>Estaremos orando por você com fé e amor.</i>  
+        </p>
+      <form action="https://formsubmit.co/d9674f89270b23fb6f0f28f526a3e61c" method="POST" data-form>
+        <!-- Configurações do FormSubmit -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_subject" value="Novo Pedido de Oração">
+        
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea name="mensagem" id="mensagem" required></textarea>
+
+        <button type="submit" data-button>Enviar</button>
+      </form>
+
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; RNunesTech</p>
+  </footer>
+
+  <script src="./js/pedOracao.js"></script>
+</body>
+</html>
