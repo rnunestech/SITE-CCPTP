@@ -1,13 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-body {
-  background-color: #f7f7f7;
-  color: #333;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* ===== HEADER ===== */
@@ -48,116 +45,289 @@ header {
   color: #3ce6f2;
 }
 
-/* Ícone do menu */
-#menu {
-  display: none;
+/* ===== BOTÃO MENU MOBILE ===== */
+.menu-btn {
+  display: none; /* escondido no computador */
   font-size: 28px;
   cursor: pointer;
+  color: #fff;
 }
 
-/* ===== SEÇÃO HOME ===== */
-.home {
-  margin-top: 50px;
-  display: flex;
+/* ===== CONTEÚDO GERAL ===== */
+h1 {
+  padding: 10%;
+}
+
+h2 { 
   align-items: center;
-  justify-content: space-around;
+  margin-left: 10%;
+}
+
+footer {
+  background-color: #f5f5f5;
+  color: #000;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+/* ===== SEÇÃO PRINCIPAL ===== */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
   flex-wrap: wrap;
-  padding: 50px;
+  background: #fff;
 }
 
 .home-img img {
-  width: 400px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  width: 550px;
+  max-width: 90%;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.home-img img:hover {
+  transform: scale(1.03);
 }
 
 .home-text {
-  max-width: 500px;
-}
-
-.home-text h1 {
-  font-size: 28px;
-  color: #222;
-  text-align: center;
-}
-
-.home-text h2 {
-  font-size: 30px;
-  color: #222;
-  text-align: center;
-  margin-top: -30px;
-}
-
-.home-text h5 {
-  font-weight: 500;
-  margin: 10px 0;
-  line-height: 1.5;
-  color: #555;
+  max-width: 600px;
+  padding: 20px;
   text-align: justify;
 }
 
-/* ===== MINI SLIDER ===== */
+.home-text h1, 
+.home-text h2 {
+  color: #222;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.home-text h1 {
+  font-size: 2em;
+  display: inline;
+}
+
+.home-text h2 {
+  font-size: 2em;
+  font-weight: 600;
+  display: inline;
+  margin-left: 8px;
+}
+
+.home-text h5 {
+  color: #444;
+  line-height: 1.6;
+  text-align: justify;
+  margin-top: 15px;
+}
+
+/* ===== MINIATURAS ===== */
 .main {
-  text-align: center;
-  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  background: #fff;
 }
 
 .main ul {
   display: flex;
-  justify-content: center;
   gap: 20px;
   list-style: none;
 }
 
-.main img {
-  width: 120px;
+.main ul li img {
+  width: 130px;
+  height: 90px;
+  object-fit: cover;
   border-radius: 10px;
   cursor: pointer;
-  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
-.main img:hover {
-  transform: scale(1.05);
-  opacity: 0.8;
+.main ul li img:hover {
+  transform: scale(1.1);
 }
 
-/* ===== RESPONSIVO ===== */
+/* Deixe espaço pro header */
+body {
+  padding-top: 40px;
+}
+
+/* ===== MENU MOBILE ===== */
 @media (max-width: 768px) {
-  #menu {
-    display: block;
+  .menu-btn {
+    display: block; /* mostra o botão hambúrguer */
   }
 
   .navegacao {
     position: absolute;
     top: 70px;
     right: 0;
-    background-color: #1a1a1a;
+    width: 100%;
+    background: #1a1a1a;
     flex-direction: column;
-    width: 200px;
-    display: none;
-    padding: 20px;
+    align-items: center;
+    gap: 15px;
+    padding: 0; /* remove padding que empurra conteúdo */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;              /* invisível */
+    visibility: hidden;      /* remove da tela */
+    transition: all 0.4s ease;
   }
 
-  .navegacao.open {
-    display: flex;
+  .navegacao.active {
+    padding: 20px 0; 
+    max-height: 300px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Troca a ordem: texto antes da imagem */
+  .home {
+    flex-direction: column-reverse;
+    padding-top: 40px;
+  }
+
+  .home-img img {
+    width: 90%;
+    max-width: 400px;
+    margin: 10px auto;
+    display: block;
+  }
+
+  .home-text {
+    text-align: justify;
+    padding: 10px 20px;
+  }
+
+   /* Ajuste fino dos títulos no mobile */
+.home-text h1, 
+.home-text h2 {
+  display: inline;        
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+}
+
+.home-text {
+  text-align: center;
+}
+
+.home-text h1,
+.home-text h2 {
+  display: inline;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.home-text h1::after {
+  content: " "; /* espaço natural entre h1 e h2 */
+}
+
+
+  /* Miniaturas próximas da imagem principal */
+  .main {
+    padding: 10px 0 40px;
+  }
+
+  .main ul {
+    gap: 10px;
+  }
+
+  .main ul li img {
+    width: 90px;
+    height: 65px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  h1, h2 {
+    padding: 15% 10px 10px;
+    text-align: center;
+  }
+
+  footer {
+    font-size: 0.9em;
+  }
+
+  iframe {
+    width: 100%;
+    height: 250px;
   }
 }
 
-/* ===== IMAGEM PRINCIPAL DO SLIDER ===== */
+/* --- Galeria --- */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 40px 60px;
+}
+
+.galeria .foto {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  background: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.galeria .foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.galeria .foto:hover img {
+  transform: scale(1.2);
+}
+
+/* --- Modal --- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  inset: 0;
+  padding-top: 80px;
+  background-color: rgba(0,0,0,0.9);
+  overflow: auto;
+  text-align: center;
+}
+
+.modal-conteudo {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+  object-fit: contain;
+  box-shadow: 0 0 10px #000;
+}
+
+#caption {
+  color: #f5f5f5;
+  margin-top: 12px;
+  font-size: 1rem;
+}
 
 .home-img img {
-  width: 400px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.4s ease, transform 0.3s ease;
 }
 
-.fade {
+.home-img img.fade {
   opacity: 0;
-}
-
-footer{
-  text-align: center;
-  color: rgba(10, 10, 10, 0.995);
 }

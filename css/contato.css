@@ -46,10 +46,142 @@ header {
 }
 
 h1{
-  padding: 10%;
+  padding: 1%;
 }
 
 h2{ 
   align-items: center;
   margin-left: 10%;
+}
+
+/* ===== ÁREA DE CONTATO ===== */
+main.contato {
+  padding-top: 120px; /* compensa o header fixo */
+  text-align: center;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+main.contato h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #1a1a1a;
+}
+
+.info-contato {
+  background: #fff;
+  display: inline-block;
+  padding: 30px 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.info-contato p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.info-contato i {
+  color: #3ce6f2;
+  margin-right: 10px;
+  font-size: 1.4rem;
+  vertical-align: middle;
+}
+
+.instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #E4405F;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.instagram:hover {
+  color: #c32aa3;
+}
+
+.instagram i {
+  font-size: 1.6rem;
+}
+
+/* ===== ÁREA DE CONTATO ===== */
+main.contato {
+  padding-top: 120px; /* espaço por causa do header fixo */
+  text-align: center;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+main.contato h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #000;
+  font-weight: 600;
+}
+
+.mapa-container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Caixa das informações de contato */
+.info-contato {
+  background: #fff;
+  display: inline-block;
+  padding: 30px 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.info-contato p {
+  font-size: 1.1rem;
+  margin: 12px 0;
+  color: #000;
+  font-weight: 600;
+}
+
+.info-contato i {
+  color: #3ce6f2;
+  margin-right: 10px;
+  font-size: 1.4rem;
+  vertical-align: middle;
+}
+
+/* Instagram link */
+.instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #E4405F;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.instagram:hover {
+  color: #c32aa3;
+}
+
+.instagram i {
+  font-size: 1.6rem;
+}
+
+/* Rodapé */
+footer {
+  background-color: #f5f5f5;
+  color: #000;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
 }

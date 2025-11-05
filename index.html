@@ -12,16 +12,24 @@
 </head>
 <body>
 
-  <header>
-    <a href="#" class="logo"><i class='bx bx-church'></i>Comunidade Cristã para Todos os Povos</a>
-    <ul class="navegacao">
-            <li><a href="sbIgreja.html">Sobre a Igreja</a></li>
-      <li><a href="galeriaft.html">Galeria de Fotos</a></li>
-      <li><a href="game.html">Quiz Bíblico</a></li>
-      <li><a href="pedOracao.html">Pedido de Oração</a></li>
-      <li><a href="contato.html">Contato</a></li>
-    </ul>
-  </header>
+<header>
+  <a href="index.html" class="logo"><i class='bx bx-church'></i>Comunidade Cristã para Todos os Povos</a>
+
+  <!-- Botão do menu mobile -->
+  <div class="menu-btn" id="menu-btn">
+    <i class='bx bx-menu'></i>
+  </div>
+
+  <ul class="navegacao" id="menu">
+    <li><a href="sbIgreja.html">Sobre a Igreja</a></li>
+    <li><a href="galeriaft.html">Galeria de Fotos</a></li>
+    <li><a href="game.html">Quiz Bíblico</a></li>
+    <li><a href="pedOracao.html">Pedido de Oração</a></li>
+    <li><a href="contato.html">Contato</a></li>
+  </ul>
+</header>
+
+
 
   <section class="home">
     <div class="home-img">
@@ -48,10 +56,14 @@
       <li><img src="./img/biblia1.jpg" onclick="slider('./img/PrincipalCCPTP.png')" alt="Imagem 1"></li>
       <li><img src="./img/biblia2.jpg" onclick="slider('./img/evangelicos2.jpg')" alt="Imagem 2"></li>
       <li><img src="./img/biblia3.jpg" onclick="slider('./img/evangelicos3.jpg')" alt="Imagem 3"></li>
+      <li><img src="./img/NaturezaMini.jpg" onclick="slider('./img/Natureza.jpg')" alt="Imagem 4"></li>
+      <li><img src="./img/ConsagracaoMini.jpg" onclick="slider('./img/Consagracao.jpg')" alt="Imagem 5"></li>
+      <li><img src="./img/Salmos9Mini.jpg" onclick="slider('./img/Salmos9.jpg')" alt="Imagem 6"></li>
     </ul>
   </div>
-    <footer>
-    <p>&copy; RNunesTech</p>
+  
+  <footer>
+    <p><strong>&copy; RNunesTech - Comunidade Cristã para Todos os Povos. Todos os direitos reservados.</strong></p>
   </footer>
 
   <script src="./js/script.js" defer></script>
