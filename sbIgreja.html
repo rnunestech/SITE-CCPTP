@@ -8,10 +8,17 @@
       <link rel="stylesheet" href="./css/sbIgreja.css">
     <title>CCPTP</title>
 </head>
+
 <body>
-    <header>
+  <header>
     <a href="index.html" class="logo"><i class='bx bx-church'></i>Comunidade Cristã para Todos os Povos</a>
-    <ul class="navegacao">
+
+    <!-- Botão do menu mobile -->
+    <div class="menu-btn" id="menu-btn">
+      <i class='bx bx-menu'></i>
+    </div>
+
+    <ul class="navegacao" id="menu">
       <li><a href="sbIgreja.html">Sobre a Igreja</a></li>
       <li><a href="galeriaft.html">Galeria de Fotos</a></li>
       <li><a href="game.html">Quiz Bíblico</a></li>
@@ -19,45 +26,56 @@
       <li><a href="contato.html">Contato</a></li>
     </ul>
   </header>
-  
-<section class="sobre">
-  <div class="sobre-conteudo">
-    <div class="sobre-imagem">
-      <img src="./img/Fundadora.png" alt="Foto da fundadora">
+    
+  <section class="sobre">
+    <div class="sobre-conteudo">
+      <div class="sobre-imagem">
+        <img src="./img/Fundadora.png" alt="Foto da fundadora">
+      </div>
+      <div class="sobre-texto">
+        <h1>História da Igreja</h1>
+      <p><b>A Comunidade Cristã Para Todos os Povos</b> nasceu do coração de Deus e do chamado à 
+        compaixão e evangelismo da Pastora Vania. Tudo começou no Centro de Detenção Provisória
+        (CDP) de Pinheiros, onde, alternando entre  sábados e domingos, ela realizava trabalhos
+          de evangelização ao lado da esposa de um detento.</p>
+        <p>Dentro das celas, a Pastora Vania ministrava cultos, cantava louvores — entre eles
+          o marcante “O Homem das Mãos Furadas Está Passando por Aqui” — e levava palavras de
+          fé e esperança aos presos, que passaram a nutrir um profundo carinho e respeito por
+          seu ministério.</p>
+        <p>Em um dos cultos, ela encontrou duas almofadas com os dizeres “Rancho dos Profetas” 
+          e um lençol pendurado na parede onde estava escrito “Comunidade Cristã Para Todos os
+          Povos”. Ela perguntou por que haviam escolhido esse nome, já que ela congregava no 
+          Rancho dos Profetas. A resposta foi simples e inspiradora: “Para que não haja divisão
+          entre ninguém.”</p>
+        <p>Assim, por meio de um gesto simbólico e cheio de significado, nasceu o nome Comunidade
+          Cristã Para Todos os Povos — um ministério marcado pela inclusão, pela unidade e pelo
+          amor de Cristo que alcança todas as pessoas.</p>
+        <p>Após seis meses de cultos realizados dentro do presídio, Deus abriu as portas para o
+          início oficial do ministério. A fundação ocorreu em 31 de março de 2011, e o registro 
+          foi formalizado em 2012. Desde então, a igreja tem crescido e frutificado, levando a 
+          Palavra de Deus .</p>
+        <p>Hoje, a Comunidade Cristã Para Todos os Povos conta também com uma filial no estado 
+          da Bahia, que há 10 anos tem sido um canal de bênção e transformação de vidas,
+          continuando a missão de anunciar o Evangelho e unir corações em Cristo.</p>
+          <h5>Edição: Angelica M. G. Silva. 01 de Novembro de 2025.</h5>
+      </div>
     </div>
-    <div class="sobre-texto">
-      <h1>História da Igreja</h1>
-     <p><b>A Comunidade Cristã Para Todos os Povos</b> nasceu do coração de Deus e do chamado à 
-      compaixão e evangelismo da Pastora Vania. Tudo começou no Centro de Detenção Provisória
-       (CDP) de Pinheiros, onde, alternando entre  sábados e domingos, ela realizava trabalhos
-        de evangelização ao lado da esposa de um detento.</p>
-      <p>Dentro das celas, a Pastora Vania ministrava cultos, cantava louvores — entre eles
-        o marcante “O Homem das Mãos Furadas Está Passando por Aqui” — e levava palavras de
-        fé e esperança aos presos, que passaram a nutrir um profundo carinho e respeito por
-        seu ministério.</p>
-      <p>Em um dos cultos, ela encontrou duas almofadas com os dizeres “Rancho dos Profetas” 
-        e um lençol pendurado na parede onde estava escrito “Comunidade Cristã Para Todos os
-        Povos”. Ela perguntou por que haviam escolhido esse nome, já que ela congregava no 
-        Rancho dos Profetas. A resposta foi simples e inspiradora: “Para que não haja divisão
-        entre ninguém.”</p>
-      <p>Assim, por meio de um gesto simbólico e cheio de significado, nasceu o nome Comunidade
-        Cristã Para Todos os Povos — um ministério marcado pela inclusão, pela unidade e pelo
-        amor de Cristo que alcança todas as pessoas.</p>
-      <p>Após seis meses de cultos realizados dentro do presídio, Deus abriu as portas para o
-        início oficial do ministério. A fundação ocorreu em 31 de março de 2011, e o registro 
-        foi formalizado em 2012. Desde então, a igreja tem crescido e frutificado, levando a 
-        Palavra de Deus .</p>
-      <p>Hoje, a Comunidade Cristã Para Todos os Povos conta também com uma filial no estado 
-        da Bahia, que há 10 anos tem sido um canal de bênção e transformação de vidas,
-         continuando a missão de anunciar o Evangelho e unir corações em Cristo.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <p><strong>&copy; RNunesTech - Comunidade Cristã para Todos os Povos. Todos os direitos reservados.</strong></p>
-</footer>
+  <footer>
+    <p><strong>&copy; RNunesTech - Comunidade Cristã para Todos os Povos. Todos os direitos reservados.</strong></p>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const menuBtn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
 
+      menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("active");
+        menuBtn.querySelector("i").classList.toggle("bx-x"); // alterna o ícone
+      });
+    });
+  </script>
     
 </body>
 </html>

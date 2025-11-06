@@ -185,3 +185,91 @@ footer {
   padding: 15px;
   font-weight: 600;
 }
+
+/* ===== MENU MOBILE ===== */
+.menu-btn {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* ===== AJUSTES RESPONSIVOS ===== */
+@media (max-width: 768px) {
+  /* --- MENU --- */
+  .menu-btn {
+    display: block; /* mostra o ícone hambúrguer */
+  }
+
+  .navegacao {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: #1a1a1a;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+  }
+
+  .navegacao.active {
+    padding: 20px 0;
+    max-height: 300px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  /* --- CONTEÚDO PRINCIPAL --- */
+  main.contato {
+    padding-top: 100px;
+  }
+
+  main.contato h1 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .mapa-container {
+    width: 95%;
+    height: 250px;
+    margin-bottom: 25px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .info-contato {
+    width: 90%;
+    padding: 20px;
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .info-contato p {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+
+  .instagram {
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  footer {
+    font-size: 0.85rem;
+    padding: 10px;
+  }
+}

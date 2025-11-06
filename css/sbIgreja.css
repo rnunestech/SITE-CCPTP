@@ -175,3 +175,45 @@ footer{
   color: rgba(10, 10, 10, 0.995);
 }
 
+/* ===== MENU MOBILE ===== */
+.menu-btn {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Configuração mobile */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block; /* mostra o ícone no celular */
+  }
+
+  .navegacao {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: #000;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+  }
+
+  .navegacao.active {
+    padding: 20px 0;
+    max-height: 300px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+}
