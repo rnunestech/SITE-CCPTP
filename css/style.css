@@ -10,7 +10,7 @@
 /* ===== HEADER ===== */
 header {
   width: 100%;
-  padding: 20px 50px;
+  padding: 15px 20px;
   background-color: #1a1a1a;
   color: #fff;
   display: flex;
@@ -26,7 +26,8 @@ header {
   text-decoration: none;
   color: #fff;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
+  text-align: left;
 }
 
 .navegacao {
@@ -47,35 +48,31 @@ header {
 
 /* ===== BOTÃO MENU MOBILE ===== */
 .menu-btn {
-  display: none; /* escondido no computador */
+  display: none;
   font-size: 28px;
   cursor: pointer;
   color: #fff;
 }
 
-/* ===== CONTEÚDO GERAL ===== */
-
-footer {
-  background-color: #f5f5f5;
-  color: #000;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
+/* ===== CONTEÚDO ===== */
+body {
+  padding-top: 70px;
+  overflow-x: hidden; /* 🔧 evita rolagem lateral no mobile */
+  background: #fff;
 }
 
-/* ===== SEÇÃO PRINCIPAL ===== */
 .home {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 40px;
   flex-wrap: wrap;
-  background: #fff;
+  text-align: center;
+  padding: 30px 15px;
 }
 
 .home-img img {
-  width: 550px;
-  max-width: 90%;
+  width: 100%;
+  max-width: 550px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   transition: transform 0.3s ease;
@@ -87,41 +84,31 @@ footer {
 
 .home-text {
   max-width: 600px;
-  padding: 20px;
-  text-align: justify;
+  padding: 15px;
+  text-align: center;
 }
 
-.home-text {
-  text-align: center; /* centraliza tudo */
-}
-
-/* ===== AJUSTE FINO DOS TÍTULOS ===== */
 .home-text h1, 
 .home-text h2 {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  line-height: 1.0; /* distância equilibrada */
+  margin: 0;              /* remove margens padrão */
+  line-height: 1.1;       /* altura de linha mais compacta */
 }
 
 .home-text h1 {
-  font-size: 2.4em;
-  white-space: nowrap; /* evita quebra de linha */
-  margin-bottom: 4px; /* distância pequena e visível */
+  font-size: 2em;
+  margin-bottom: 5px;     /* pequena distância entre h1 e h2 */
 }
 
 .home-text h2 {
-  font-size: 2em;
-  font-weight: 600;
-  margin-top: 0;
+  font-size: 1.6em;
+  margin-top: 0;          /* encosta no h1 */
 }
-
 
 .home-text h5 {
   color: #444;
   line-height: 1.6;
+  margin-top: 10px;
   text-align: justify;
-  margin-top: 15px;
 }
 
 /* ===== MINIATURAS ===== */
@@ -129,18 +116,21 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 0;
-  background: #fff;
+  padding: 30px 0;
 }
 
 .main ul {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .main ul li img {
-  width: 130px;
+  width: 120px;
   height: 90px;
   object-fit: cover;
   border-radius: 10px;
@@ -153,21 +143,26 @@ footer {
   transform: scale(1.1);
 }
 
-/* Deixe espaço pro header */
-body {
-  padding-top: 40px;
+/* ===== FOOTER ===== */
+footer {
+  background-color: #f5f5f5;
+  color: #000;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+  width: 100%;
 }
 
 /* ===== MENU MOBILE ===== */
 @media (max-width: 768px) {
   .menu-btn {
-    display: block; /* mostra o botão hambúrguer */
+    display: block;
   }
 
   .navegacao {
     position: absolute;
-    top: 70px;
-    right: 0;
+    top: 65px;
+    left: 0;
     width: 100%;
     background: #1a1a1a;
     flex-direction: column;
@@ -182,157 +177,57 @@ body {
   }
 
   .navegacao.active {
-    padding: 20px 0; 
+    padding: 20px 0;
     max-height: 300px;
     opacity: 1;
     visibility: visible;
   }
 
-  /* Troca a ordem: texto antes da imagem */
+  /* 🔧 Corrige layout da seção home */
   .home {
     flex-direction: column-reverse;
-    padding-top: 40px;
+    padding: 20px 15px;
   }
 
   .home-img img {
+    max-width: 100%;
     width: 90%;
-    max-width: 400px;
     margin: 10px auto;
     display: block;
   }
 
   .home-text {
-    text-align: justify;
-    padding: 10px 20px;
+    padding: 10px;
   }
 
-  /* Ajuste fino dos títulos no mobile */
-  .home-text h1, 
-  .home-text h2 {
-    display: inline;        
-    text-align: center;
-    margin: 0;
-    line-height: 1;
+  .home-text h1 {
+  font-size: 1.6em;
+  margin-bottom: 4px;
+}
+
+ .home-text h2 {
+  font-size: 1.3em;
+  margin-top: 0;
+}
+
+ .home-text h5 {
+    font-size: 0.95em;
   }
 
-  .home-text {
-    text-align: center;
-  }
-
-  .home-text h1,
-  .home-text h2 {
-    display: inline;
-    margin: 0;
-    line-height: 1.1;
-  }
-
-  .home-text h1::after {
-    content: " ";
-  }
-
-  /* Miniaturas próximas da imagem principal */
-  .main {
-    padding: 10px 0 40px;
-  }
-
-  /* ====== 🔧 AJUSTE IMPORTANTE: 3 MINI IMAGENS POR LINHA ====== */
+  /* 🔧 3 miniaturas por linha */
   .main ul {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 imagens por linha */
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     justify-items: center;
-    padding: 0;
   }
 
   .main ul li img {
-    width: 100%;
-    max-width: 90px;
-    height: auto;
-  }
-  /* ============================================================ */
-
-  .logo {
-    font-size: 16px;
-  }
-
-  h1, h2 {
-    padding: 15% 10px 10px;
-    text-align: center;
+    width: 90px;
+    height: 70px;
   }
 
   footer {
     font-size: 0.9em;
   }
-
-  iframe {
-    width: 100%;
-    height: 250px;
-  }
-}
-
-/* --- Galeria --- */
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 40px 60px;
-}
-
-.galeria .foto {
-  aspect-ratio: 4 / 3;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  background: #fff;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.galeria .foto img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
-}
-
-.galeria .foto:hover img {
-  transform: scale(1.2);
-}
-
-/* --- Modal --- */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 2000;
-  inset: 0;
-  padding-top: 80px;
-  background-color: rgba(0,0,0,0.9);
-  overflow: auto;
-  text-align: center;
-}
-
-.modal-conteudo {
-  margin: auto;
-  display: block;
-  max-width: 90%;
-  max-height: 80vh;
-  border-radius: 10px;
-  object-fit: contain;
-  box-shadow: 0 0 10px #000;
-}
-
-#caption {
-  color: #f5f5f5;
-  margin-top: 12px;
-  font-size: 1rem;
-}
-
-.home-img img {
-  transition: opacity 0.4s ease, transform 0.3s ease;
-}
-
-.home-img img.fade {
-  opacity: 0;
 }
